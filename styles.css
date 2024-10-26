@@ -1,0 +1,116 @@
+/* Fondo de la página */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a2a6c, #030758, #2d4779);
+    color: #ffffff;
+}
+
+/* Contenedor del juego */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Título */
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Tablero */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* Establece una cuadrícula 3x3 */
+    grid-template-rows: repeat(3, 100px);    /* Establece tres filas de 100px */
+    gap: 10px;
+    margin: 20px auto;
+    width: 320px;  /* Asegura el ancho del tablero para alinear las celdas */
+}
+
+/* Celdas del juego */
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    transition: background 0.3s;
+}
+
+.cell:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Mensaje y cronómetro */
+#message {
+    font-size: 1.2em;
+    margin-top: 15px;
+    color: #f0f0f0;
+}
+
+#timer {
+    font-size: 1.2em;
+    margin-top: 5px;
+    color: #f0f0f0;
+}
+
+/* Botón de nuevo juego */
+#new-game {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #0077b6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#new-game:hover {
+    background-color: #005f99;
+}
+
+/* Lista de mejores tiempos */
+.best-times-container {
+    margin-top: 20px;
+    color: #f5f5f5;
+}
+
+.best-times-container h2 {
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.best-times-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.best-times-container li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
